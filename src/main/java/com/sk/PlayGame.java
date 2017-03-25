@@ -1,20 +1,25 @@
 package com.sk;
 
-
 import com.sk.objects.*;
 import com.sk.utils.GameUtils;
 
 
 /**
- * Created by SamK on 3/19/17.
+ * Console game that demonstrates use of objects, classes, interface, unit tests, and java to simulate
+ * a Black Jack game
+ *
+ * @author Samra Kasim
  */
 public class PlayGame {
-
+    /**
+     * Console-game entry point. The main class instantiates Player, Dealer, MoneyPot, Hand, and Deck objects.
+     * It contains the logic to play the game.
+     * @param args: String values supplied when running console game
+     */
     public static void main(String[] args){
 
-
         MoneyPot moneyPot = new MoneyPot(); // Create player's moneyPot
-        moneyPot.setMoney(GameUtils.validateMoneyPotRespone()); // Ask player how much money they have to play today
+        moneyPot.setMoney(GameUtils.validateMoneyPotResponse()); // Ask player how much money they have to play today
         Player player = new Player(); // Create a new player
         Dealer dealer = new Dealer(); // Create a new dealer
 
@@ -136,7 +141,6 @@ public class PlayGame {
                     }
                 }
             }
-
             // If player runs out of money, end game. Else, ask if they want to continue or end game
             play = GameUtils.validateContinueGameResponse(moneyPot);
         }

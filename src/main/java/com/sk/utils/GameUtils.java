@@ -9,16 +9,15 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
- * Created by SamK on 3/22/17.
+ * Utility class contains method used in execution of the program
+ *
+ * @author Samra Kasim
  */
 public class GameUtils {
 
     /**
      * Method returns the input value entered into the console as a string
      * @return value: String input value entered by user
-     *
-     * @precondition -- the program will run the method
-     * @postcondition -- the method will return a String
      */
     public static String getInput()
     {
@@ -27,6 +26,11 @@ public class GameUtils {
         value = input.nextLine();
         return value;
     }
+
+    /**
+     * Method returns the input value into the console as a double
+     * @return value: double input value entered by user
+     */
     public static double getDoubleInput()
     {
         double value;
@@ -34,6 +38,14 @@ public class GameUtils {
         value = input.nextDouble();
         return value;
     }
+
+    /**
+     * Method prints scores to the console screen
+     * @param player: Player object representing the player
+     * @param dealer: Dealer object representing the dealer
+     * @param playerHand: Hand object representing the player's hand
+     * @param dealerHand: Hand object representing the dealer's hand
+     */
     public static void printTotals(Player player, Dealer dealer, Hand playerHand, Hand dealerHand){
         System.out.println();
         System.out.println("Game Update:");
@@ -43,6 +55,15 @@ public class GameUtils {
         System.out.println("DEALER point total ["+ dealer.getPointTotal()+"]");
         System.out.println();
     }
+
+    /**
+     * Method takes in player and dealer point totals, moneyPot value, and currentBet and returns a system.out
+     * to the console screen indicating the winner of the game
+     * @param playerPointTotal: int value representing the pointTotal in a Player object
+     * @param dealerPointTotal: int value representing the pointTotal in a Dealer object
+     * @param moneyPot: MoneyPot object representing player's total amount of money
+     * @param currentBet: double value representing a player's current bet
+     */
     public static void determineWinner(int playerPointTotal, int dealerPointTotal, MoneyPot moneyPot,
                                        double currentBet){
         if (dealerPointTotal > playerPointTotal) {
@@ -59,6 +80,13 @@ public class GameUtils {
             System.out.println("PLAYER AND DEALER TIED with a point total of [" + playerPointTotal + "]");
         }
     }
+
+    /**
+     * Method asks for and validates the user's response to continue playing game. Method takes in a moneyPot
+     * variables representing a moneyPot object.
+     * @param moneyPot: variable represnting the MoneyPot object
+     * @return play: boolean value representing whether to continue with the game (true) or quit game game(false)
+     */
     public static boolean validateContinueGameResponse(MoneyPot moneyPot){
         boolean play = false;
         System.out.println("You have a total of [$"+ moneyPot.getMoney() +"] remaining");
@@ -79,7 +107,13 @@ public class GameUtils {
         }
         return play;
     }
-    public static double validateMoneyPotRespone(){
+
+    /**
+     * Method asks for and validates the amount of money for a player to play with in the current game session.
+     * @return inputMoneyPot: double value representing the amount of money a player wants to play with
+     * in one game sessio
+     */
+    public static double validateMoneyPotResponse(){
         double inputMoneyPot = -1;
         while (inputMoneyPot <= 0) {
             try {
@@ -89,11 +123,17 @@ public class GameUtils {
                 inputMoneyPot = getDoubleInput();
             } catch (InputMismatchException e) {
                 System.out.println("Invalid format");
-                inputMoneyPot = validateMoneyPotRespone();
+                inputMoneyPot = validateMoneyPotResponse();
             }
         }
         return inputMoneyPot;
     }
+
+    /**
+     * Method asks for and validates the amount of money the player wants to bet on the current hand
+     * @param moneyPotAmount: double value representing the amount total money a player has
+     * @return currentBet: double value representing the current bet placed by player
+     */
     public static double validatecurrentBetResponse(double moneyPotAmount){
         double currentBet = -1;
         while (currentBet <= 0 || currentBet > moneyPotAmount) {
@@ -110,7 +150,7 @@ public class GameUtils {
                 }
             } catch (InputMismatchException e) {
                 System.out.println("Invalid format");
-                currentBet = validateMoneyPotRespone();
+                currentBet = validateMoneyPotResponse();
             }
         }
         return currentBet;

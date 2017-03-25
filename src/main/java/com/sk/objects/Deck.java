@@ -7,12 +7,19 @@ import java.util.Arrays;
 import java.util.Random;
 
 /**
- * Created by SamK on 3/9/17.
+ * Class creates the Deck object, which represents a deck of cards in the game
+ *
+ * @author Samra Kasim
  */
 public class Deck {
     private ArrayList<Card> deckOfCards = new ArrayList<Card>();
     private ArrayList<String> acesList = new ArrayList<>();
 
+    /**
+     * Constructor to instantiate a new deck object that contains the representation of 52
+     * Card objects in an ArrayList of type Card and also an ArrayList of type String that
+     * contains the list of all aces
+     */
     public Deck(){
         deckOfCards.add(new Card("Two of Spades", 2));
         deckOfCards.add(new Card("Two of Diamonds", 2));
@@ -69,14 +76,21 @@ public class Deck {
         acesList.addAll(Arrays.asList("Ace of Spades", "Ace of Diamonds", "Ace of Hearts", "Ace of Clubs"));
     }
 
-
+    /**
+     * Method that represents taking a hit. The method generates a random number, which is utilized to pick a
+     * Card object from the deckOfCards ArrayList. Since, an Ace can either be valued at 1 or 11, if the Card
+     * picked is an ace, the method takes into account the pointTotal of the participant to determine whether
+     * to value an ace as a 1 or an 11.
+     * @param deck: A Deck object representing a deck of cards
+     * @param participant: A Participant object representing a dealer or a player
+     * @return card: A Card object representing a randomly chose card in a deck
+     */
     public Card takeHit(Deck deck, Participant participant){
         int randomUpperBound = deck.getCards().size();
-        //System.out.println("random upper bound: "+ randomUpperBound);
         Random random = new Random();
 
-        int r = random.nextInt(randomUpperBound); // +1 because the bound is exclusive
-        Card card = deckOfCards.get(r); //there is something not right here where you are getting index out of bound exceptions
+        int r = random.nextInt(randomUpperBound); // Generate a random number bound by the number of cards in deck
+        Card card = deckOfCards.get(r); // Use the random number to pick a card from the deck
 
         /* Check to see if card is an ace (in acesList). If it is, then check point total to see if
         adding 11 would exceed 21, if point total doesn't exceed 21, then set ace to 11. If point total
@@ -94,10 +108,21 @@ public class Deck {
         //return card value
         return card;
     }
+
+    /**
+     * Getter method to return an ArrayList of type Card
+     * @return deckofCards: an ArrayList of type Card
+     */
     public ArrayList<Card> getCards(){
-        //System.out.println(deckOfCards.size());
         return this.deckOfCards;
     }
+
+    /**
+     * toString method that generates a comma separated String of all the key values in the
+     * deckOfCards ArrayList
+     * @return str: String value representing the comma separated String of all the key values in the
+     * deckOfCards ArrayList
+     */
     public String toString(){
         String str ="";
         for (int i=0; i<deckOfCards.size(); i++){
