@@ -13,13 +13,15 @@ import static org.junit.Assert.*;
  * Created by SamK on 3/16/17.
  */
 
-public class HandTest {
+public class HandTest
+{
 
     private static String _expectedHand = "Two of Spades, Three of Hearts";
     private static String _expectedSecondHand = "Two of Spades, Three of Hearts, Eight of Clubs";
     private static int _expectedLength = 3;
     @Test
-    public void handTests() throws Exception {
+    public void handTests() throws Exception
+    {
         List<Card> cards = new ArrayList<>(); // instantiated a new List Array of Cards (or Hand)
         Card hitCard = new Card("Two of Spades", 2); // instantiated a new Card
         Card hitCard2 = new Card("Three of Hearts", 3);

@@ -7,14 +7,15 @@ import com.sk.interfaces.Participant;
  *
  * @author Samra Kasim
  */
-public class Dealer implements Participant {
-
+public class Dealer implements Participant
+{
     private int pointTotal;
 
     /**
      * Constructor method creates a Dealer object with pointTotal value set to 0
      */
-    public Dealer(){
+    public Dealer()
+    {
         this.pointTotal = 0;
     }
 
@@ -40,7 +41,8 @@ public class Dealer implements Participant {
      * Method adds points to the pointTotal
      * @param pointsEarned An integer value for the number of points earned by participant
      */
-    public void addToPointTotal(int pointsEarned) {
+    public void addToPointTotal(int pointsEarned)
+    {
         int newPointTotal;
         newPointTotal = getPointTotal() + pointsEarned;
         setPointTotal(newPointTotal);
@@ -49,7 +51,8 @@ public class Dealer implements Participant {
     /**
      * Method resets the pointTotal to 0
      */
-    public void resetPointTotal() {
+    public void resetPointTotal()
+    {
         setPointTotal(0);
     }
 }

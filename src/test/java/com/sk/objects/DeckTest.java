@@ -10,7 +10,8 @@ import static org.junit.Assert.*;
 /**
  * Created by SamK on 3/9/17.
  */
-public class DeckTest {
+public class DeckTest
+{
     String _expectedDeck = "Two of Spades, Two of Diamonds, Two of Hearts, Two of Clubs, Three of Spades, " +
             "Three of Diamonds, Three of Hearts, Three of Clubs, " +
             "Four of Spades, Four of Diamonds, Four of Hearts, " +
@@ -27,7 +28,8 @@ public class DeckTest {
             " King of Spades, King of Diamonds, King of Hearts, King of Clubs, Ace of Spades, " +
             "Ace of Diamonds, Ace of Hearts, Ace of Clubs";
     @Test
-    public void TakeHitTest() throws Exception {
+    public void TakeHitTest() throws Exception
+    {
         Deck deck = new Deck();
         Hand hand = new Hand();
         Player player = new Player();
@@ -35,7 +37,8 @@ public class DeckTest {
         assertNotNull(deck.takeHit(deck, player));
     }
     @Test
-    public void getCardsTest() throws Exception {
+    public void getCardsTest() throws Exception
+    {
         Deck deck = new Deck();
         assertEquals(_expectedDeck, deck.toString());
     }

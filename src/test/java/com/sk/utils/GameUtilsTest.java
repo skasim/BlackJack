@@ -15,7 +15,8 @@ import static org.junit.Assert.*;
 /**
  * Created by SamK on 3/23/17.
  */
-public class GameUtilsTest {
+public class GameUtilsTest
+{
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
     private static String _expectedDetermineWinnerPlayerWinsResponse = "PLAYER WINS with point total of [19] " +
@@ -23,20 +24,24 @@ public class GameUtilsTest {
     private static String _expectedDetermineWinnerDealerWinsResponse = "DEALER WINS with point total of [21]  " +
             "versus player point total of [10]\n";
     private static String _expectedDetermineTieResponse = "PLAYER AND DEALER TIED with a point total of [20]\n";
+
     @Before
-    public void setUpStreams() {
+    public void setUpStreams()
+    {
         System.setOut(new PrintStream(outContent));
         System.setErr(new PrintStream(errContent));
     }
 
     @After
-    public void cleanUpStreams() {
+    public void cleanUpStreams()
+    {
         System.setOut(null);
         System.setErr(null);
     }
 
     @Test
-    public void determineWinnerPlayerWins() throws Exception {
+    public void determineWinnerPlayerWins() throws Exception
+    {
         Player player = new Player();
         MoneyPot moneyPot = new MoneyPot();
         Dealer dealer = new Dealer();
@@ -49,7 +54,8 @@ public class GameUtilsTest {
     }
 
     @Test
-    public void determineWinnerDealerWins() throws Exception {
+    public void determineWinnerDealerWins() throws Exception
+    {
         Player player = new Player();
         MoneyPot moneyPot = new MoneyPot();
         Dealer dealer = new Dealer();
@@ -61,7 +67,8 @@ public class GameUtilsTest {
         assertEquals(_expectedDetermineWinnerDealerWinsResponse, outContent.toString());
     }
     @Test
-    public void determineWinnerTie() throws Exception {
+    public void determineWinnerTie() throws Exception
+    {
         Player player = new Player();
         MoneyPot moneyPot = new MoneyPot();
         Dealer dealer = new Dealer();

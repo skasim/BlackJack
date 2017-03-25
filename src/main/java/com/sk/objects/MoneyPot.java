@@ -6,14 +6,15 @@ package com.sk.objects;
  *
  * @author Samra Kasim
  */
-public class MoneyPot {
-
+public class MoneyPot
+{
     private double money;
 
     /**
      * Constructor creates a moneyPot object, with money variable set to 0.0
      */
-    public MoneyPot(){
+    public MoneyPot()
+    {
         this.money = 0.0;
     }
 
@@ -22,7 +23,8 @@ public class MoneyPot {
      * object
      * @param money: a double value representing the total amount of money for a Player object
      */
-    public MoneyPot(double money){
+    public MoneyPot(double money)
+    {
         this.money = money;
     }
 
@@ -30,23 +32,35 @@ public class MoneyPot {
      * Getter method returns the money variable for the MoneyPot object
      * @return money: double value representing the total amount of money for a Player object
      */
-    public double getMoney(){ return this.money; }
+    public double getMoney()
+    {
+        return this.money;
+    }
 
     /**
      * Setter method sets the money variable value for the MoneyPot object
      * @param money: double value representing the total amount of money for a Player object
      */
-    public void setMoney(double money){ this.money = money; }
+    public void setMoney(double money)
+    {
+        this.money = money;
+    }
 
     /**
      * Method adds money to the money variable of the MoneyPot object
      * @param money: double value representing the total amount of money for a Player object
      */
-    public void addMoney(double money){ this.money += money; }
+    public void addMoney(double money)
+    {
+        this.money += money;
+    }
 
     /**
      * Method subtracts money from the money variable of the MoneyPot object
      * @param money: double value representing the total amount of money for a Player object
      */
-    public void subtractMoney(double money){ this.money -= money; }
+    public void subtractMoney(double money)
+    {
+        this.money -= money;
+    }
 }

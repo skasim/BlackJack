@@ -8,10 +8,12 @@ import static org.junit.Assert.*;
 /**
  * Created by SamK on 3/11/17.
  */
-public class MoneyPotTest {
+public class MoneyPotTest
+{
 
     @Test
-    public void MoneyPotTest() throws Exception {
+    public void MoneyPotTest() throws Exception
+    {
         MoneyPot moneyPot = new MoneyPot(50);
         assertEquals(50, moneyPot.getMoney(),0 );
         moneyPot.setMoney(110);

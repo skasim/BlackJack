@@ -6,8 +6,8 @@ package com.sk.objects;
 
  * @author Samra Kasim
  */
-public class Card {
-
+public class Card
+{
     private String key;
     private int value;
 
@@ -25,23 +25,35 @@ public class Card {
      * Getter method returns the key for the Card object
      * @return key: a String value
      */
-    public String getKey(){ return this.key; }
+    public String getKey()
+    {
+        return this.key;
+    }
 
     /**
      * Setter method sets the key value for the Card object
      * @param key: a String value representing the key variable
      */
-    public void setKey(String key){ this.key = key; }
+    public void setKey(String key)
+    {
+        this.key = key;
+    }
 
     /**
      * Getter method returns the value for the Card object
      * @return value: an int value
      */
-    public Integer getValue() { return this.value; }
+    public Integer getValue()
+    {
+        return this.value;
+    }
 
     /**
      * Setter method sets the Value variable for the Card object
      * @param value: an integer value representing the value of a card
      */
-    public void setValue(int value) { this. value = value; }
+    public void setValue(int value)
+    {
+        this. value = value;
+    }
 }

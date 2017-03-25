@@ -9,9 +9,11 @@ import static org.junit.Assert.*;
 /**
  * Created by SamK on 3/12/17.
  */
-public class PlayerTest {
+public class PlayerTest
+{
     @Test
-    public void testMoneyPot() throws Exception {
+    public void testMoneyPot() throws Exception
+    {
 
         Player player = new Player();
         MoneyPot moneyPot = new MoneyPot(100);
@@ -20,7 +22,8 @@ public class PlayerTest {
     }
 
     @Test
-    public void addToPointTotal() throws Exception {
+    public void addToPointTotal() throws Exception
+    {
         Player player = new Player();
         player.setPointTotal(99);
         player.addToPointTotal(100);

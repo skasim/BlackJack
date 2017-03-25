@@ -8,19 +8,22 @@ import static org.junit.Assert.*;
 /**
  * Created by SamK on 3/22/17.
  */
-public class DealerTest {
+public class DealerTest
+{
     static int _expectedPointTotal = 50;
     static int _expectedResetPointTotal = 0;
 
     @Test
-    public void setPointTotal() throws Exception {
+    public void setPointTotal() throws Exception
+    {
         Dealer dealer = new Dealer();
         dealer.setPointTotal(50);
         assertEquals(_expectedPointTotal, dealer.getPointTotal());
     }
 
     @Test
-    public void addToPointTotal() throws Exception {
+    public void addToPointTotal() throws Exception
+    {
         Dealer dealer = new Dealer();
         dealer.setPointTotal(40);
         dealer.addToPointTotal(10);
@@ -28,7 +31,8 @@ public class DealerTest {
     }
 
     @Test
-    public void resetPointTotal() throws Exception {
+    public void resetPointTotal() throws Exception
+    {
         Dealer dealer = new Dealer();
         dealer.setPointTotal(50);
         dealer.resetPointTotal();

@@ -9,7 +9,8 @@ import java.util.List;
  *
  * @author Samra Kasim
  */
-public class Hand {
+public class Hand
+{
     private List<Card> hand;
     private int cardsCount;
 
@@ -17,7 +18,8 @@ public class Hand {
      * Constructor creates a new Hand object that contains a List of type Card
      * and the variable cardsCount, which represents the number of cards in the Hand
      */
-    public Hand(){
+    public Hand()
+    {
         this.hand = new ArrayList<Card>();
         this.cardsCount = 0;
     }
@@ -27,38 +29,39 @@ public class Hand {
      * @return hand: Hand object representing a the hand (i.e., all the cards that
      * have been dealt to a participant)
      */
-    public List<Card> getHand(){ return this.hand; }
+    public List<Card> getHand()
+    {
+        return this.hand;
+    }
 
     /**
      * Setter method sets the Hand object
      * @param hand: Hand object representing a the hand (i.e., all the cards that
      * have been dealt to a participant)
      */
-    public void setHand(List<Card> hand) { this.hand = hand; }
+    public void setHand(List<Card> hand)
+    {
+        this.hand = hand;
+    }
 
     /**
      * Method adds a Card object to the Hand object
      * @param card: Card object representing a card in a deck
      */
-    public void addtoHand(Card card) { this.hand.add(card); }
+    public void addtoHand(Card card)
+    {
+        this.hand.add(card);
+    }
 
     /**
      * Getter method returns the size of the List of type Card
      * @return int: an Integer value representing the number of Card objects in
      * List of type Card
      */
-    public int getCardsCount() { return getHand().size(); }
-
-    /**
-     * Setter method sets the cardsCount value for the Hand object
-     * @param cardsCount: an int value representing the size of the List of type Card
-     */
-    public void setCardsCount(int cardsCount) { this.cardsCount = cardsCount; }
-
-//    /**
-//     * Method adds 1 to the the cardsCount variable of the Hand object
-//     */
-//    public void addToCardsCount(){ this.cardsCount +=1; }
+    public int getCardsCount()
+    {
+        return getHand().size();
+    }
 
     /**
      * toString method that generates a comma separated String of all the key values in the
@@ -66,12 +69,16 @@ public class Hand {
      * @return arrayOutput: String value representing the comma separated String of all the key values in the
      * deckOfCards ArrayList
      */
-    public String toString(){
+    public String toString()
+    {
         String arrayOutput = "";
-        for (int i=0; i<hand.size(); i++){
-            if (!(i == hand.size() - 1)){
+        for (int i=0; i<hand.size(); i++)
+        {
+            if (!(i == hand.size() - 1))
+            {
                 arrayOutput += hand.get(i).getKey()+", ";
-            } else {
+            } else
+            {
                 arrayOutput += hand.get(i).getKey();
             }
         }

@@ -11,7 +11,8 @@ import java.util.Random;
  *
  * @author Samra Kasim
  */
-public class Deck {
+public class Deck
+{
     private ArrayList<Card> deckOfCards = new ArrayList<Card>();
     private ArrayList<String> acesList = new ArrayList<>();
 
@@ -20,7 +21,8 @@ public class Deck {
      * Card objects in an ArrayList of type Card and also an ArrayList of type String that
      * contains the list of all aces
      */
-    public Deck(){
+    public Deck()
+    {
         deckOfCards.add(new Card("Two of Spades", 2));
         deckOfCards.add(new Card("Two of Diamonds", 2));
         deckOfCards.add(new Card("Two of Hearts", 2));
@@ -85,7 +87,8 @@ public class Deck {
      * @param participant: A Participant object representing a dealer or a player
      * @return card: A Card object representing a randomly chose card in a deck
      */
-    public Card takeHit(Deck deck, Participant participant){
+    public Card takeHit(Deck deck, Participant participant)
+    {
         int randomUpperBound = deck.getCards().size();
         Random random = new Random();
 
@@ -96,10 +99,14 @@ public class Deck {
         adding 11 would exceed 21, if point total doesn't exceed 21, then set ace to 11. If point total
         does exceed 21, then set ace to 1.
          */
-        if (acesList.contains(card.getKey())){
-            if((participant.getPointTotal()+11)<=21){
+        if (acesList.contains(card.getKey()))
+        {
+            if((participant.getPointTotal()+11)<=21)
+            {
                 card.setValue(11);
-            } else{
+            }
+            else
+            {
                 card.setValue(1);
             }
         }
@@ -113,7 +120,8 @@ public class Deck {
      * Getter method to return an ArrayList of type Card
      * @return deckofCards: an ArrayList of type Card
      */
-    public ArrayList<Card> getCards(){
+    public ArrayList<Card> getCards()
+    {
         return this.deckOfCards;
     }
 
@@ -123,12 +131,17 @@ public class Deck {
      * @return str: String value representing the comma separated String of all the key values in the
      * deckOfCards ArrayList
      */
-    public String toString(){
+    public String toString()
+    {
         String str ="";
-        for (int i=0; i<deckOfCards.size(); i++){
-            if (!(i == (deckOfCards.size() -1))){
+        for (int i=0; i<deckOfCards.size(); i++)
+        {
+            if (!(i == (deckOfCards.size() -1)))
+            {
                 str += deckOfCards.get(i).getKey() +", ";
-            } else {
+            }
+            else
+            {
                 str += deckOfCards.get(i).getKey();
             }
 
