@@ -10,11 +10,11 @@ import com.sk.utils.GameUtils;
  *
  * @author Samra Kasim
  */
-public class PlayGame
+public class BlackjackGameSimulator
 {
     /**
-     * Console-game entry point. The main class instantiates Player, Dealer, MoneyPot, Hand, and Deck objects.
-     * It contains the logic to play the game.
+     * Console-game entry point. The main class instantiates Player, Dealer, MoneyPot, Hand, and Deck objects
+     * and contains the logic of the game.
      * @param args: String values supplied when running console game
      */
     public static void main(String[] args)
