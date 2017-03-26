@@ -12,7 +12,6 @@ import java.util.List;
 public class Hand
 {
     private List<Card> hand;
-    private int cardsCount;
 
     /**
      * Constructor creates a new Hand object that contains a List of type Card
@@ -21,7 +20,6 @@ public class Hand
     public Hand()
     {
         this.hand = new ArrayList<Card>();
-        this.cardsCount = 0;
     }
 
     /**

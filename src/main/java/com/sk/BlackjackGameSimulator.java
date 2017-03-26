@@ -36,7 +36,7 @@ public class BlackjackGameSimulator
             System.out.println("STARTING A NEW GAME!");
             System.out.println();
             // Ask player how much money they want to bet this hand
-            double currentBet = GameUtils.validatecurrentBetResponse(moneyPot.getMoney());
+            double currentBet = GameUtils.validateCurrentBetResponse(moneyPot.getMoney());
 
             // Create a new deck, playerHand, and dealerHand
             Deck deck = new Deck();

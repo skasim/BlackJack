@@ -10,7 +10,9 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 /**
- * Created by SamK on 3/16/17.
+ * Unit tests for Hand class
+ *
+ * @author Samra Kasim
  */
 
 public class HandTest

@@ -13,7 +13,9 @@ import java.io.PrintStream;
 import static org.junit.Assert.*;
 
 /**
- * Created by SamK on 3/23/17.
+ * Unit tests for GameUtils class
+ *
+ * @author Samra Kasim
  */
 public class GameUtilsTest
 {

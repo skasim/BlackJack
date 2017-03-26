@@ -40,6 +40,7 @@ public class GameUtils
         return value;
     }
 
+    //TODO Delete below method
     /**
      * Method prints scores to the console screen
      * @param player: Player object representing the player
@@ -157,7 +158,7 @@ public class GameUtils
      * @param moneyPotAmount: double value representing the amount total money a player has
      * @return currentBet: double value representing the current bet placed by player
      */
-    public static double validatecurrentBetResponse(double moneyPotAmount)
+    public static double validateCurrentBetResponse(double moneyPotAmount)
     {
         double currentBet = -1;
         while (currentBet <= 0 || currentBet > moneyPotAmount)

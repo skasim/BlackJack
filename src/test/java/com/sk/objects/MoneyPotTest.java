@@ -6,7 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by SamK on 3/11/17.
+ * Unit Tests for MoneyPot class
+ *
+ * @author Samra Kasim
  */
 public class MoneyPotTest
 {

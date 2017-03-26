@@ -6,7 +6,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * Created by SamK on 3/22/17.
+ * Unit tests for Card class
+ *
+ * @author Samra Kasim
  */
 public class CardTest
 {

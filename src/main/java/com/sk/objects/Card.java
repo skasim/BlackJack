@@ -43,7 +43,7 @@ public class Card
      * Getter method returns the value for the Card object
      * @return value: an int value
      */
-    public Integer getValue()
+    public int getValue()
     {
         return this.value;
     }
