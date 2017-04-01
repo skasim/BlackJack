@@ -40,25 +40,6 @@ public class GameUtils
         return value;
     }
 
-    //TODO Delete below method
-    /**
-     * Method prints scores to the console screen
-     * @param player: Player object representing the player
-     * @param dealer: Dealer object representing the dealer
-     * @param playerHand: Hand object representing the player's hand
-     * @param dealerHand: Hand object representing the dealer's hand
-     */
-    public static void printTotals(Player player, Dealer dealer, Hand playerHand, Hand dealerHand)
-    {
-        System.out.println();
-        System.out.println("Game Update:");
-        System.out.println("PLAYER'S hand: ["+ playerHand.toString()+"]");
-        System.out.println("PLAYER point total ["+ player.getPointTotal()+"]");
-        System.out.println("DEALER'S hand ["+ dealerHand.toString()+"]");
-        System.out.println("DEALER point total ["+ dealer.getPointTotal()+"]");
-        System.out.println();
-    }
-
     /**
      * Method takes in player and dealer point totals, moneyPot value, and currentBet and returns a system.out
      * to the console screen indicating the winner of the game

@@ -59,8 +59,6 @@ public class BlackjackGameSimulator
                 // Add currentBet to moneyPot because of win
                 moneyPot.addMoney(currentBet);
                 GameUtils.playerWinsBet(currentBet, moneyPot);
-                //TODO REMOVE BELOW
-                GameUtils.printTotals(player, dealer, playerHand, dealerHand);
             }
             // If player did not win with 21 right off the bat
             else
@@ -73,8 +71,6 @@ public class BlackjackGameSimulator
                 dealer.addToPointTotal(dcard1.getValue() + dcard2.getValue());
                 System.out.println("DEALER is dealt two cards. Card facing up is [" + dcard1.getKey()+"] " +
                         "valued at [" + dcard1.getValue() +"]");
-                //TODO REMOVE BELOW
-                System.out.println("REMOVE LATER: Dealer point total is: " + dealer.getPointTotal());
 
                 // Player can now determine whether she wants to hit or stay
                 boolean hit = true;
@@ -88,9 +84,8 @@ public class BlackjackGameSimulator
                         Card pcard = deck.takeHit(deck, player);
                         playerHand.addtoHand(pcard);
                         player.addToPointTotal(pcard.getValue());
-                        System.out.println("PLAYER chooses to hit. Card is [" + pcard.getKey()+"]");
-                        //TODO REMOVE BELOW
-                        GameUtils.printTotals(player, dealer, playerHand, dealerHand);
+                        System.out.println("PLAYER chooses to hit. Card is [" + pcard.getKey()+"] valued at" +
+                                " [" + pcard.getValue() + "]. Player point total is [" + player.getPointTotal() +"]" );
                         // With every hit taken, check to see if score exceeds 21
                         if (player.getPointTotal() > 21)
                         {
@@ -116,8 +111,6 @@ public class BlackjackGameSimulator
                     {
                         hit = false;
                         System.out.println("PLAYER chooses to stay");
-                        //TODO REMOVE BELOW
-                        GameUtils.printTotals(player, dealer, playerHand, dealerHand);
 
                     }
                     else
@@ -146,8 +139,6 @@ public class BlackjackGameSimulator
                                 // Add currentBet to moneyPot because of win
                                 moneyPot.addMoney(currentBet);
                                 GameUtils.playerWinsBet(currentBet, moneyPot);
-                                //TODO REMOVE BELOW
-                                GameUtils.printTotals(player, dealer, playerHand, dealerHand);
                                 break;
                             }
                             else if (dealer.getPointTotal() == 21)
@@ -157,24 +148,18 @@ public class BlackjackGameSimulator
                                 // Subtract currentBet from moneyPot because of loss
                                 moneyPot.subtractMoney(currentBet);
                                 GameUtils.playerLosesBet(currentBet, moneyPot);
-                                //TODO REMOVE BELOW
-                                GameUtils.printTotals(player, dealer, playerHand, dealerHand);
                                 break;
                             }
                             else if (dealer.getPointTotal() >= 17 && dealer.getPointTotal() > player.getPointTotal())
                             {
                                 GameUtils.determineWinner(player.getPointTotal(), dealer.getPointTotal(),
                                         moneyPot, currentBet);
-                                //TODO REMOVE BELOW
-                                GameUtils.printTotals(player, dealer, playerHand, dealerHand);
                                 break;
                             }
                             else if (dealer.getPointTotal() >= 17 && dealer.getPointTotal() > player.getPointTotal())
                             {
                                 GameUtils.determineWinner(player.getPointTotal(), dealer.getPointTotal(),
                                         moneyPot, currentBet);
-                                //TODO REMOVE BELOW
-                                GameUtils.printTotals(player, dealer, playerHand, dealerHand);
                                 break;
                             }
                         }
